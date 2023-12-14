@@ -1,9 +1,9 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header elevated class="bg-primary text-white">
+    <q-header elevated class="bg-white text-black">
       <q-toolbar>      
-        <ConnectAccount/>
+        <Account/>
         <q-space/>
         <ConnectAccount/>
       </q-toolbar>
@@ -27,5 +27,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ConnectAccount from 'src/components/ConnectAccount.vue';
+import Account from 'src/components/Account.vue';
 
 </script>

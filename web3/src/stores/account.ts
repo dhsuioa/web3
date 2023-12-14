@@ -3,7 +3,7 @@ import { Address } from 'abitype';
 import { getAccount, walletClient } from '../contracts/init';
 import { defineStore } from 'pinia';
 
-export const useAccount = defineStore('account', () => {
+export const useAccountStore = defineStore('account', () => {
   const address = ref<Address | undefined>(undefined);
   const isLoading = ref(false);
   const isConnected = ref(false);

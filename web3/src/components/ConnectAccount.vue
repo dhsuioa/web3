@@ -7,14 +7,14 @@
   
 <script setup>
 import { computed } from 'vue';
-import { useAccount } from '../stores/account';
+import { useAccountStore } from '../stores/account';
 import { useQuasar } from 'quasar'
 import { storeToRefs } from 'pinia';
 
 const $q = useQuasar()
 
-const { isConnected, isLoading } = storeToRefs(useAccount());
-const { connect, disconnect } = useAccount();
+const { isConnected, isLoading } = storeToRefs(useAccountStore());
+const { connect, disconnect } = useAccountStore();
 const buttonColor = computed(() => isConnected.value ? 'primary' : 'negative');
 const buttonText = computed(() => isConnected.value ? 'Connected' : 'Sign in');
 
