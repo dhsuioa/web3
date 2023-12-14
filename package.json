@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "abitype": "^0.10.3",
+    "viem": "^1.19.15",
+    "vite": "^5.0.8",
+    "vue-toastification": "^1.7.14"
+  }
+}
