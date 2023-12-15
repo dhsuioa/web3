@@ -1,5 +1,5 @@
 <template>
-  <q-btn :color="buttonColor" @click="isConnected ? handleDisconnect() : handleConnect()">
+  <q-btn outline rounded :color="buttonColor" @click="isConnected ? handleDisconnect() : handleConnect()">
     <q-spinner v-if="isLoading" size="sm" color="white" />
     {{ buttonText }}
   </q-btn>

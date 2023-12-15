@@ -1,11 +1,14 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header elevated class="bg-white text-black">
-      <q-toolbar>      
-        <Account/>
-        <q-space/>
-        <ConnectAccount/>
+    <q-header  class="bg-white text-black">
+      <q-toolbar class="row justify-center" align="right">    
+        <div class="col-4 q-py-xl" >
+          <Account/>
+        </div>  
+        <div class="col-4 q-py-xl" >
+          <ConnectAccount/>
+        </div>  
       </q-toolbar>
     </q-header>
     
