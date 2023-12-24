@@ -12,11 +12,13 @@
       </template>
     </div>
     <div class="q-ma-xs q-gutter-sm">
-      <q-btn outline size="sm" padding="xs" icon="currency_exchange" color="secondary" :disabled="!isConnected" @click="onOpen" />
-      <q-btn outline size="sm" padding="xs" icon="currency_bitcoin" color="secondary" :disabled="!isConnected" @click="addDisplayToken" />
+      <q-btn outline size="sm" padding="xs" icon="currency_exchange" color="secondary" :disabled="!isConnected" @click="isOpen = true" />
+      <q-btn outline size="sm" padding="xs" icon="currency_bitcoin" color="secondary" :disabled="!isConnected" @click="addDisplayToken()" />
     </div>
   </div>
-  <!-- <modal-token-transaction :is-open="isOpen" @onOpenChange="onOpenChange" /> -->
+    <q-dialog v-model="isOpen">
+      <ModalTokenTransaction/>
+    </q-dialog>
 </template>
   
 <script setup>
@@ -25,10 +27,9 @@ import { useAccountStore } from '../stores/account';
 import { sliceAddress } from '../utils/utils';
 import { storeToRefs } from 'pinia';
 import { useTokenStore } from '../stores/token';
+import ModalTokenTransaction from './ModelTokenTransaction.vue';
 
-// import ModalTokenTransaction from './ModelTokenTransaction.vue';
-
-const { isOpen, onOpen, onOpenChange } = ref(false);
+const isOpen = ref(false);
 const { address, isConnected } = storeToRefs(useAccountStore());
 const { balanceStr, isTokenLoading } = storeToRefs(useTokenStore());
 const { addDisplayToken, updateBalance } = useTokenStore();

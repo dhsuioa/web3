@@ -1,5 +1,5 @@
 <template>
-    <div class="flex q-gutter-sm">
+    <!-- <div class="flex q-gutter-sm">
       <q-input
         v-model="filter"
         label="filter"
@@ -15,8 +15,8 @@
       <q-btn @click="onOpen" rounded outline color="primary">
         Post
       </q-btn>
-      <!-- <switch-poster /> -->
-    </div>
+      <switch-poster />
+    </div> -->
     <!-- <modal-poster-creation :is-open="isOpen" @onOpenChange="onOpenChange" /> -->
   </template>
   
